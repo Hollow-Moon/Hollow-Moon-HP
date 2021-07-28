@@ -25,6 +25,10 @@ The title menu will show once the opening movie has been played.
 ### A "Authentication failed: unrecognized kernel32 module. / NM" or "The Mahoutsukai no Yoru install disc could not be found" error is shown
 Extract [this archive](https://cdn.discordapp.com/attachments/636713186044805123/747237694723326042/WOHN_cxdec_nokernel32_nocd_noexe.tpm.7z) using [7-zip](https://www.7-zip.org/), then replace `魔法使いの夜.tpm` in the `plugin` folder of the installation directory with the contents of the archive.  
 
+### A "There is not enough space on MAHOYO" error appears when attempting to install the patch.
+Grab the folder `魔法使いの夜` and drop it on the Desktop or another folder of your choosing.  
+Install the patch in the copy of the folder `魔法使いの夜`.
+
 ### When installing the game, the progress bar is stuck or characters are garbled
 Cancel and close the installer, open the game disc in Windows Explorer, then grab the folder `魔法使いの夜` and drop it on the Desktop or another folder of your choosing.  
 If there is an error when copying the files, you may have a defective disc or disc drive. In this case, please try a different disc drive and see if the issue persists.  
