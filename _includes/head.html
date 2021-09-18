@@ -1,0 +1,57 @@
+<head prefix="og: http://ogp.me/ns# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# website: http://ogp.me/ns/website#">
+    <!-- General Tags -->
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+
+    <!-- Title & Description -->
+    {% capture pagetitle %}{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}{% endcapture %}
+    {% if page.use_content_for_description %}
+        {% capture meta_desc_content %}{{ page.content }}{% endcapture %}
+    {% endif %}
+    {% capture pagedesc %}{{ page.excerpt | default: meta_desc_content | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}{% endcapture %}
+    <title>{{ pagetitle }}</title>
+    <meta name="description" content="{{ pagedesc }}"/>
+    
+    <!-- Title & Description Metadata -->
+    {% if page.title %}
+        <meta property="og:title" content="{{ page.title }}" />
+    {% endif %}
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="{{ site.title }}"/>
+    <meta property="og:url" content="{{ page.url | replace:'index.html','' | absolute_url }}"/>
+    {% if page.date %}
+      <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}"/>
+    {% endif %}
+    {% if page.author.url %}
+      <meta property="article:author" content="{{ page.author.url }}"/>
+      <link rel="author" href="{{ page.author.url }}"/>
+    {% elsif site.owner_link %}
+      <meta property="article:author" content="{{ site.owner_link }}"/>
+      <link rel="author" href="{{ site.owner_link }}"/>
+    {% endif %}
+
+    <!-- Icon & Metadata -->
+    <link rel="icon" type="image/png" href="{{ "/assets/metadata/favicon-32x32.png" | relative_url }}" sizes="32x32">
+    <link rel="icon" type="image/png" href="{{ "/assets/metadata/favicon-16x16.png" | relative_url }}" sizes="16x16">
+    <meta property="og:image" content="{{ "/assets/metadata/og-image.png" | absolute_url }}">
+
+    <!-- Twitter metadata -->
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@HollowMoonTL"/>
+    <meta name="twitter:title" content="{{ pagetitle }}"/>
+    <meta name="twitter:description" content="{{ pagedesc }}"/>
+    <meta name="twitter:image" content="{{ "/assets/metadata/og-image.png" | absolute_url }}">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="{{ "/assets/style/main.css" | relative_url }}">
+
+    <!-- Browser & Mobile config -->
+    <link rel="manifest" href="{{ "/assets/metadata/manifest.json" | relative_url }}"> <!-- Android -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/metadata/apple-touch-icon.png" | relative_url }}"> <!-- iOS -->
+    <link rel="mask-icon" href="{{ "/assets/metadata/safari-pinned-tab.svg" | relative_url }}" color="#06a5aa"> <!-- iOS -->
+    <meta name="theme-color" content="#06a5aa">
+    <!-- TODO browserconfig.xml -->
+
+</head>

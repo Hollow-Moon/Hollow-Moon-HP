@@ -1,0 +1,223 @@
+---
+# Needs front matter to be compiled
+---
+
+@font-face {
+    font-family: "XCharter";
+    src: url("/assets/fonts/XCharter-Roman.woff2") format("woff2");
+}
+
+$blue: #348CCB;
+$green: #34CBA2;
+
+$shadow: 1px 1px 10px $blue;
+$project-shadow: 1px 1px 3px $blue;
+$shadow-highlight: 1px 1px 10px $green;
+$project-shadow-highlight: 1px 1px 3px $green;
+
+$breakpoint-tablet: 768px;
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.text-highlight {
+    color: white;
+    text-shadow: $shadow;
+    transition: text-shadow ease-in-out .15s;
+
+    &:hover {
+        text-shadow: $shadow-highlight;
+    }
+}
+
+.img-highlight-hover {
+    transition: filter ease-in-out .25s;
+
+    &:hover {
+        filter: drop-shadow($shadow-highlight);
+    }
+}
+
+#content {
+    height: 100%;
+    width: 100%;
+}
+
+// Home page
+
+#homepage {
+    background: url("/assets/images/background1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+
+    section {
+        width: 100%;
+        height: 100vh;
+        scroll-snap-align: start;
+        box-sizing: border-box;
+    }
+}
+
+#landing {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4vh;
+
+    #logo {
+        max-height: 65%;
+        margin-bottom: -10px;
+    }
+
+    p {
+        font-family: "XCharter";
+        font-size: 1.5rem;
+
+        @media screen and (min-width: $breakpoint-tablet) {
+            font-size: 2rem;
+        }
+    }
+
+    #socials {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5vh;
+    }
+
+    .social-icon {
+        @extend .img-highlight-hover;
+        width: 7vh;
+        height: auto;
+        filter: drop-shadow($shadow);
+    }
+}
+
+#overview {
+    display: flex;
+    flex-direction: column;
+    padding: 4vh;
+    overflow: auto;
+
+    // Desktop
+    @media screen and (min-width: $breakpoint-tablet) {
+        padding-top: 50px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10vh;
+    }
+
+    h1 {
+        font-family: "XCharter";
+        font-size: 2.7rem;
+        font-weight: normal;
+    }
+
+    #projects {
+        width: 100%;
+
+        // Desktop
+        @media screen and (min-width: $breakpoint-tablet) {
+            width: 30%;
+            margin-left: auto;
+        }
+
+        #project-list {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .project {
+            img {
+                filter: drop-shadow($project-shadow);
+                transition: filter ease-in-out .25s;
+
+                &:hover {
+                    filter: drop-shadow($project-shadow-highlight);
+                }
+
+                max-width: 100%;
+                max-height: 25vh;
+                border-radius: 38px;
+            }
+        }
+    }
+
+    #blog-posts {
+        margin-top: 35px;
+        width: 100%;
+
+        // Desktop
+        @media screen and (min-width: $breakpoint-tablet) {
+            margin-top: 0;
+            width: 50%;
+            margin-right: auto;
+        }
+        
+        > h1 {
+            margin-bottom: 30px;
+        }
+
+        .latest-posts {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            > a {
+                text-decoration: none;
+                color: white;
+                font-family: "XCharter";
+            }
+
+            &:last-child {
+                margin-bottom: 4vh;
+            }
+        }
+
+        .blog-post {
+            background-color: rgba($green, 0.28);
+            transition: background-color ease-in-out .25s;
+            padding: 30px;
+
+            header {
+                margin-bottom: 15px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                > h1 {
+                    flex-grow: 1;
+                    font-size: 1.5rem;
+                }
+
+                .post-meta {
+                    font-size: 1rem;
+                }
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            &:hover {
+                background-color: rgba($green, 0.55);
+            }
+        }
+    }
+}

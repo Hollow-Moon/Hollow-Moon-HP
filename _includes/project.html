@@ -1,0 +1,9 @@
+{% comment %}
+    Three params:
+    1. `project_page` - relative URL to project page
+    2. `project_image` - relative URL to button image
+    3. `project_name` - the name of the project
+{% endcomment %}
+<div class="project"><a href="{{ include.project_page | relative_url }}">
+    <img src="{{ include.project_image | relative_url }}" alt="{{ include.project_name | strip_html }}"/>
+</a></div>
