@@ -1,0 +1,22 @@
+$shadow: 1px 1px 10px $highlight-primary;
+$project-shadow: 1px 1px 3px $highlight-primary;
+$shadow-highlight: 1px 1px 10px $highlight-secondary;
+$project-shadow-highlight: 1px 1px 3px $highlight-secondary;
+
+.text-highlight {
+    color: white;
+    text-shadow: $shadow;
+    transition: text-shadow ease-in-out .15s;
+
+    &:hover {
+        text-shadow: $shadow-highlight;
+    }
+}
+
+.img-highlight-hover {
+    transition: filter ease-in-out .25s;
+
+    &:hover {
+        filter: drop-shadow($shadow-highlight);
+    }
+}

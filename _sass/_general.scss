@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "XCharter";
+    src: url("/assets/fonts/XCharter-Roman.woff2") format("woff2");
+}
+
+@import "effects";
+
+$breakpoint-tablet: 768px;
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}

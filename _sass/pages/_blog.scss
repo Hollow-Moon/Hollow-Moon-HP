@@ -1,0 +1,141 @@
+nav {
+    // Position
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    top: -1px; // HACK: For Intersection Observer
+
+    // Style
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    transition: background ease-in-out 0.4s, height ease-in-out 0.4s;
+
+    // Layout
+    --padding: 3vh;
+
+    width: 100%;
+    padding: var(--padding);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    #logo-link {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1vh;
+
+        order: 1;
+
+        #logo-text {
+            height: 3.5vh;
+        }
+
+        #logo {
+            height: 7vh;
+            transition: height ease-in-out .5s;
+        }
+    }
+
+    #site-links {
+        width: 100%;
+        order: 3;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        list-style: none;
+
+        > a {
+            color: white;
+            text-decoration: none;
+        }
+
+        li {
+            --link-padding-y: 3vh;
+            --link-padding-x: 3vw;
+            padding: var(--link-padding-y) var(--link-padding-x);
+            margin-bottom: calc(-1 * var(--padding));
+            box-sizing: border-box;
+            font-size: 1.8rem;
+            transition: background ease-in-out 0.3s;
+
+            &:hover {
+                background: rgba(255, 255, 255, 0.15);
+            }
+        }
+
+        .active:after {
+            display: block;
+            content: "";
+            background: $highlight-secondary;
+            height: 3px;
+            border-radius: 3px;
+            width: calc(100% + 2 * var(--link-padding-x));
+            margin-left: calc(-1 * var(--link-padding-x));
+            margin-right: calc(-1 * var(--link-padding-x));
+            margin-top: var(--padding);
+            margin-bottom: calc(-1 * var(--padding) - 1px);
+        }
+    }
+
+    #socials {
+        order: 2;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5vw;
+    }
+
+    .social-icon {
+        @extend .img-highlight-hover;
+        width: 5vh;
+        height: auto;
+        filter: drop-shadow($shadow);
+    }
+
+    // Scroll behaviour on mobile
+    @media screen and (max-width: $breakpoint-tablet) {
+        &.scrolled {
+            background: rgba($highlight-primary, 0.8);
+            align-items: flex-end;
+    
+            #logo {
+                height: 5vh !important;
+            }
+    
+            #socials, #logo-text {
+                display: none;
+            }
+    
+            #site-links {
+                order: 2;
+                flex: 1;
+    
+                li {
+                    padding-top: 0;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+    // Desktop layout
+    @media screen and (min-width: $breakpoint-tablet) {
+        #socials {
+            order: 3;
+        }
+
+        #site-links {
+            order: 2;
+        }
+    }
+}
+
+.post {
+    margin-top: 5vh;
+    background: white;
+    padding: 4vh;
+}
