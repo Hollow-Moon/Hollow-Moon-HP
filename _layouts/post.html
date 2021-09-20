@@ -1,32 +1,34 @@
 ---
 layout: default
 ---
-<nav id="navbar">
-    <a href="{{ "/" | relative_url }}" id="logo-link">
-        <img src="{{ "/assets/images/logo_notext.svg" | absolute_url }}" alt="🌙" id="logo" class="img-highlight-hover">
-        <img src="{{ "/assets/images/logo_text.svg" | absolute_url }}" alt="Hollow Moon" id="logo-text">
-    </a>
-    <ul id="site-links">
-        <a href="#TODO"><li>Projects</li></a>
-        <a href="#TODO"><li class="active">Blog</li></a>
-        <a href="#TODO"><li>About</li></a>
-    </ul>
-    <div id="socials">
-        <a href="https://twitter.com/HollowMoonTL"><img src="{{ "assets/images/icons/soc-icon-twt.svg" | relative_url }}" alt="Twitter" class="social-icon"></a>
-        <a href="https://discord.gg/2ngdyQd"><img src="{{ "assets/images/icons/soc-icon-discord.svg" | relative_url }}" alt="Discord" class="social-icon"></a>
-        <a href="https://github.com/Hollow-Moon"><img src="{{ "assets/images/icons/soc-icon-gh.svg" | relative_url }}" alt="GitHub" class="social-icon"></a>
-    </div>
-</nav>
-
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
-        <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %}<br>by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
-    </header>
-
-    <div class="post-content" itemprop="articleBody">
-        {{ content }}
-    </div>
-</article>
+<div id="post-page">
+    <nav id="navbar">
+        <a href="{{ "/" | relative_url }}" id="logo-link">
+            <img src="{{ "/assets/images/logo_notext.svg" | absolute_url }}" alt="🌙" id="logo" class="img-highlight-hover">
+            <img src="{{ "/assets/images/logo_text.svg" | absolute_url }}" alt="Hollow Moon" id="logo-text">
+        </a>
+        <ul id="site-links">
+            <a href="#TODO"><li>Projects</li></a>
+            <a href="#TODO"><li class="active">Blog</li></a>
+            <a href="#TODO"><li>About</li></a>
+        </ul>
+        <div id="socials">
+            <a href="https://twitter.com/HollowMoonTL"><img src="{{ "assets/images/icons/soc-icon-twt.svg" | relative_url }}" alt="Twitter" class="social-icon"></a>
+            <a href="https://discord.gg/2ngdyQd"><img src="{{ "assets/images/icons/soc-icon-discord.svg" | relative_url }}" alt="Discord" class="social-icon"></a>
+            <a href="https://github.com/Hollow-Moon"><img src="{{ "assets/images/icons/soc-icon-gh.svg" | relative_url }}" alt="GitHub" class="social-icon"></a>
+        </div>
+    </nav>
+    
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+            <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+            <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %}<br>by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+        </header>
+    
+        <div class="post-content" itemprop="articleBody">
+            {{ content }}
+        </div>
+    </article>
+</div>
 
 <script src="{{ "/assets/script/main.js" | absolute_url }}"></script>

@@ -1,5 +1,5 @@
 //  Navbar scroll behaviour
-const navbar = document.querySelector("#navbar");
+const navbar = document.getElementById("navbar");
 
 const observer = new IntersectionObserver(function(entries, _) {
     entries.forEach(entry => {
