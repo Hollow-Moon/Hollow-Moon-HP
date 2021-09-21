@@ -3,27 +3,24 @@ layout: post
 title: "Update & Addressing some FAQ"
 excerpt: <p>Hello everyone! We hope that you've all had a good new year so far. We're here to kick off the year with some updates, or clarifications rather, for all of you.</p>
 date: 2021-01-10 12:00:00 +0000
-author: Nasu
 ---
 
-### Update & Addressing some FAQ
+Hello *everyone*! We **hope** that you've all had a good new year so far. We're here to kick off the year with some updates, or clarifications rather, for all of you. None of the things in this post are really new, but they're things we feel haven't been made perfectly clear yet and so we've decided to collect them in this post to properly address them publically.
 
-Hello everyone! We hope that you've all had a good new year so far. We're here to kick off the year with some updates, or clarifications rather, for all of you. None of the things in this post are really new, but they're things we feel haven't been made perfectly clear yet and so we've decided to collect them in this post to properly address them publically.
-
-#### Regarding future partial releases (Ch. 9 + 10)
+### Regarding future partial releases (Ch. 9 + 10)
 
 As we approach the late stages of this project, some of you may be wondering whatever happened to us releasing Chapters 9 and 10 ahead of the full patch, once they finished. Unfortunately, this is our official explanation to you that this will not be happening. Said comment was hastily made during a time when we were still undergoing major changes in terms of workflow (more on this below), and we have since decided that, for the sake of quality and consistency, we will not be doing any additional partial releases. In other words, the next release from us will be the full patch for the entire game at once.
 
 We understand your disappointment and apologize for any confusion.
 
-#### Regarding our workflow, or: why we don't consider this a double translation anymore
+### Regarding our workflow, or: why we don't consider this a double translation anymore
 
 As you may or may not know, this translation project originally started out as a French to English translation of the game, based on Moon-Trad's French script. At this point, Japanese translators who were able to cross-check the French translation with the original Japanese script were more of a scarcity, and as such the project fell into the category of your standard double translation. Eventually, however, applications by multiple Japanese translators/proofreaders came in, and as more of them joined the project, there was a big shift in how the translation was being approached and worked on. The basic workflow now instead consisted of a French to English translation, then proofreading the English script by comparing it to the Japanese directly, to finally be edited.
 
 Before we get into more detail about this process, there are recurring questions (partly the cause for this very post) about why we, at the point when JP translators joined the project, didn't just switch to a complete JP-EN translation and started mostly from scratch? The answer to this is twofold, and we will get into this more below, but in short it comes down to: 
 
-1) Most of the FR-EN translation was already done by this point, and
-2) The FR-EN translation tends to alleviate translation bumps and speed up editing.
+1. Most of the FR-EN translation was already done by this point, and
+2. The FR-EN translation tends to alleviate translation bumps and speed up editing.
 
 At this point in time, our general workflow consists of multiple parts, which include: remaining FR-EN translations, JP translation check (TLC), and editing. What the FR-EN translation entails should be self-explanatory, and likewise the editing phase serves an obvious purpose - to tighten up grammar and flow in the English text. But what does the JP TLC actually do then? During this phase, a JP translator/proofreader will go over both the EN and JP scripts at the same time. We want to emphasize that at this point, the French script has no more bearing on anything else. Each script is compared, line by line, to the Japanese to make sure that the translation is correct. Many people seem to underestimate what goes into this process (or even whether it happens at all), so we want to point out that this process doesn't only involve finding mistranslations or the like. Rather, in addition to that, it involves making sure that word choices are as close as possible to the original Japanese text, that the tone of the line is the same in both languages, and even making sure that the metre/flow of the lines feels the same in English as it does in Japanese. In other words, practically every line undergoes pretty major alterations as it passes through TLC.
 

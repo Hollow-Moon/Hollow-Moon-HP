@@ -11,7 +11,7 @@ nav {
     transition: background ease-in-out 0.4s, height ease-in-out 0.4s;
 
     // Layout
-    --padding: 3vh;
+    --padding: min(1.1rem, 3vh);
 
     width: 100%;
     padding: var(--padding);
@@ -90,7 +90,7 @@ nav {
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 2vw;
+        gap: 3.5vw;
     }
 
     .social-icon {
@@ -137,6 +137,7 @@ nav {
 
         #socials {
             order: 3;
+            gap: 2vw;
 
             img {
                 width: 4vmin;
