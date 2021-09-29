@@ -40,12 +40,12 @@ function watch() {
     console.log(`Polling: ${usePolling ? `ON (${pollingInterval}ms)` : "OFF"}`);
     gulp.watch(
         ["_sass/**/*.scss", "assets/style/main.scss"],
-        {usePolling: usePolling, interval: 500},
+        {usePolling: usePolling, interval: pollingInterval},
         style
     );
     gulp.watch(
         ["index.html", "_posts/*.md", "_includes/*.html", "_layouts/*.html"],
-        {usePolling: usePolling, interval: 500},
+        {usePolling: usePolling, interval: pollingInterval},
         gulp.series(jekyll, browserSyncReload)
     )
 }
