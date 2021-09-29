@@ -72,7 +72,7 @@ nav {
             }
         }
 
-        .active:after {
+        .active::after {
             display: block;
             content: "";
             background: $highlight-secondary;

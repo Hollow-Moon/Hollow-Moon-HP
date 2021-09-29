@@ -35,8 +35,14 @@ sass:
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
 exclude:
+  # Misc info
   - Gemfile
   - Gemfile.lock
   - .gitignore
   - README.md
+  # Dev Tools
   - .devcontainer
+  - gulpfile.js
+  - node_modules
+  - package.json
+  - package_lock.json

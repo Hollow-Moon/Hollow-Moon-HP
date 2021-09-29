@@ -26,7 +26,25 @@ Either within the dev container or locally, run:
 bundle exec jekyll serve --livereload
 ```
 
-If you're on Windows and or using a dev container, you might need to also append the `--force_polling` flag to get the development to watch for all file changes, including Sass.
+If you're on Windows and / or using a dev container, you might need to also append the `--force_polling` flag to get the development to watch for all file changes, including Sass.
+
+### Advanced: BrowserSync with Gulp v4
+Tired of a full page reload every time CSS refreshes? You can use the provided `gulpfile` and a little help from Node.js to use BrowserSync and have instant CSS updates during development.
+
+Follow the setup below and then run `gulp serve`.
+
+Note: If you're on Windows and / or using the dev container, you might need to also set the env variable `POLL` to `1` to force file updates to be polling based. To customize the polling interval you can provide a value to the `POLLING_INTERVAL` env variable in ms.
+
+#### Set up
+0. When not using the dev container as the dev environment, install [Node.js](https://nodejs.org/en/).
+1. Install the Gulp CLI:
+   ```sh
+   npm i -g gulp-cli
+   ```
+2. Install the dev dependencies:
+   ```sh
+   npm i -d
+   ```
 
 ### Contributing new pages
 New blog posts need to be created under the `_posts` directory as Markdown files with the following file name pattern: `YYYY-MM-DD-text-here.md`.
