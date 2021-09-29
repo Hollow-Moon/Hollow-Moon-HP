@@ -14,7 +14,7 @@ $project-shadow-highlight: 1px 1px 3px $highlight-secondary;
 }
 
 .img-highlight-hover {
-    transition: filter ease-in-out .25s;
+    transition: filter ease-out .25s;
 
     &:hover {
         filter: drop-shadow($shadow-highlight);
