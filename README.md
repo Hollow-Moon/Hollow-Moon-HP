@@ -10,6 +10,10 @@ The website of Hollow Moon over at [hollow-moon.org](https://hollow-moon.org).
 2. Open the project with [Visual Studio Code](https://code.visualstudio.com/).
 3. Install the [Remote - Containers extension](vscode:extension/ms-vscode-remote.remote-containers).
 4. Use the `Remote-Containers: Open Folder in Container` action in Visual Studio Code to re-open the project within the development container.
+5. Install project dependencies:
+   ```sh
+   bundle install
+   ```
 
 #### Option 2: Manually
 1. Install [Ruby](https://www.ruby-lang.org/en/). **You need Ruby 2**.
@@ -44,6 +48,10 @@ Note: If you're on Windows and / or using the dev container, you might need to a
 2. Install the dev dependencies:
    ```sh
    npm i -d
+   ```
+3. To run, use:
+   ```sh
+   gulp serve
    ```
 
 ### Contributing new pages
