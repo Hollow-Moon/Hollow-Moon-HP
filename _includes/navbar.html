@@ -4,9 +4,9 @@
         <img src="{{ "/assets/images/logo_text.svg" | relative_url }}" alt="Hollow Moon" id="logo-text" class="img-highlight-hover">
     </a>
     <div id="site-links">
-        <a class="active" href="#TODO"><div class="link-inner">Projects</div></a>
-        <a href="#TODO"><div class="link-inner">Blog</div></a>
-        <a href="#TODO"><div class="link-inner">About</div></a>
+        <a {% if page.active_tab == 'projects' %} class="active"{% endif %} href="#TODO"><div class="link-inner">Projects</div></a>
+        <a {% if page.active_tab == 'blog' %} class="active"{% endif %} href="#TODO"><div class="link-inner">Blog</div></a>
+        <a {% if page.active_tab == 'about' %} class="active"{% endif %} href="#TODO"><div class="link-inner">About</div></a>
     </div>
     <div id="socials">
         <a href="https://twitter.com/HollowMoonTL"><img src="{{ "assets/images/icons/soc-icon-twt.svg" | relative_url }}" alt="Twitter" class="social-icon"></a>

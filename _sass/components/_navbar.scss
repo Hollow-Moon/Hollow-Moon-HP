@@ -8,7 +8,7 @@ nav {
     // Style
     background: rgba(255, 255, 255, 0.08);
     color: white;
-    transition: background ease-in-out 0.4s, height ease-in-out 0.4s;
+    transition: background ease-in-out 0.4s, height ease-in-out 0.4s, padding ease-in-out 0.3s;
 
     // Layout
     --padding: min(1.1rem, 3vh);
@@ -31,11 +31,11 @@ nav {
         order: 1;
 
         #logo-text {
-            height: 3.5vh;
+            height: min(3.5vh, 1.5rem);
         }
 
         #logo {
-            height: 6vmin;
+            height: min(6vmin, 3.5rem);
             transition: height ease-in-out .5s;
         }
     }
@@ -82,6 +82,7 @@ nav {
             margin-left: calc(-1 * var(--link-padding-x));
             margin-right: calc(-1 * var(--link-padding-x));
             margin-top: calc(var(--padding) - 1px);
+            transition: 0.3s all ease-in-out;
         }
     }
 
@@ -90,12 +91,12 @@ nav {
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 3.5vw;
+        gap: clamp(1rem, 3.5vw, 2rem);
     }
 
     .social-icon {
         @extend .img-highlight-hover;
-        width: 5vh;
+        width: clamp(5vw, 5vh, 2.5rem);
         height: auto;
         filter: drop-shadow($shadow);
     }
@@ -107,7 +108,7 @@ nav {
         // Collapse & restructure on mobile
         @media screen and (max-width: $breakpoint-tablet) {
             #logo {
-                height: 5vh !important;
+                height: min(5vh, 3rem) !important;
             }
 
             #socials, #logo-text {
@@ -126,7 +127,7 @@ nav {
 
         // Shrink slightly on desktop
         @media screen and (min-width: $breakpoint-tablet) {
-            --padding: 1.5vh;
+            --padding: 1.2vh;
             padding: var(--padding) 3vh;
         }
     }
@@ -140,13 +141,13 @@ nav {
             gap: 2vw;
 
             img {
-                width: 4vmin;
+                width: min(4vmin, 2rem);
             }
         }
 
         #logo-link {
             #logo-text {
-                height: 4vmin;
+                height: min(4vmin, 2rem);
             }
         }
 
@@ -155,7 +156,7 @@ nav {
             order: 2;
 
             a {
-                font-size: 4vmin;
+                font-size: min(4vmin, 2rem);
             }
         }
     }

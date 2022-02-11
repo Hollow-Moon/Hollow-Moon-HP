@@ -8,9 +8,13 @@
     margin: 5vh auto;
     background: white;
     padding: 4vh;
-    max-width: 140vh;
 
     --smallest-font-size: clamp(1rem, 3vmin, 1.4rem);
+
+    // Desktop
+    @media screen and (min-width: $breakpoint-tablet) {
+        width: min(80%, 100rem);
+    }
 
     .post-header {
         display: flex;
@@ -38,7 +42,9 @@
         }
 
         // Typography
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             margin-top: 3vh;
         }
 

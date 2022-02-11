@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Website is up!"
+active_tab: blog
 excerpt: <p>The website is now up and running!</p>
 date: 2020-09-22 12:00:00 +0000
 ---

@@ -2,6 +2,7 @@
 layout: post
 title: "Update & Addressing some FAQ"
 excerpt: <p>Hello everyone! We hope that you've all had a good new year so far. We're here to kick off the year with some updates, or clarifications rather, for all of you.</p>
+active_tab: blog
 date: 2021-01-10 12:00:00 +0000
 ---
 
