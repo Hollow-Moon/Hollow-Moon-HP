@@ -1,10 +1,23 @@
 const projectShowcase = document.getElementById("project-showcase");
+
 if (projectShowcase) {
     const activeItem = document.getElementById("active-item");
     const allItems = document.getElementById("all-items");
 
+    let currentActiveItem = null;
+    const setCurrentActiveItem = (newActiveItem) => {
+        newActiveItem.classList.add("all-items__active");
+        if (currentActiveItem) {
+            currentActiveItem.classList.remove("all-items__active");
+            activeItem.children[0].replaceWith(newActiveItem.cloneNode((deep = true)));
+        } else {
+            activeItem.appendChild(newActiveItem.cloneNode((deep = true)));
+        }
+        currentActiveItem = newActiveItem;
+    };
+
     // Initialize the active item
-    activeItem.appendChild(allItems.children[0].cloneNode((deep = true)));
+    setCurrentActiveItem(allItems.children[0]);
 
     // Handle mouse clicks
     for (let i = 0; i < allItems.children.length; ++i) {
@@ -13,7 +26,7 @@ if (projectShowcase) {
         child.addEventListener("click", (e) => {
             e.stopPropagation();
             e.preventDefault();
-            activeItem.children[0].replaceWith(allItems.children[i].cloneNode((deep = true)));
+            setCurrentActiveItem(allItems.children[i]);
         });
     }
 }

@@ -35,8 +35,8 @@ nav {
         }
 
         #logo {
-            height: min(6vmin, 3.5rem);
-            transition: height ease-in-out .5s;
+            height: min(10vmin, 3.5rem);
+            transition: height ease-in-out 0.5s;
         }
     }
 
@@ -111,14 +111,15 @@ nav {
                 height: min(5vh, 3rem) !important;
             }
 
-            #socials, #logo-text {
+            #socials,
+            #logo-text {
                 display: none;
             }
 
             #site-links {
                 order: 2;
                 flex: 1;
-    
+
                 a {
                     font-size: 1.5rem;
                 }
@@ -150,7 +151,6 @@ nav {
                 height: min(4vmin, 2rem);
             }
         }
-
 
         #site-links {
             order: 2;
