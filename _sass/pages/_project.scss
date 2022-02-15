@@ -133,3 +133,52 @@
         }
     }
 }
+
+#project-progress {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vmin;
+
+    .chapter-progress {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1vmin;
+
+        > p {
+            margin: 0;
+            width: 15%;
+        }
+    }
+
+    .chapter-progress-bars {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        gap: 0.3rem;
+
+        .progress-bar-wrapper {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1vmin;
+
+            > span {
+                width: 5%;
+            }
+        }
+
+        .progress-bar {
+            height: 0.5rem;
+            width: 100%;
+            background-color: #cecece;
+            border-radius: 1rem;
+        }
+
+        .progress-bar__inner {
+            height: 100%;
+            border-radius: 10rem;
+            background-color: $highlight-secondary;
+        }
+    }
+}
