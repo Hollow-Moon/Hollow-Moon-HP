@@ -164,9 +164,11 @@
             flex-direction: row;
             align-items: center;
             gap: 1vmin;
+            opacity: 1;
+            transition: opacity ease-in-out 0.25s;
 
             > span {
-                width: 5%;
+                width: 12%;
             }
         }
 
@@ -175,11 +177,55 @@
             width: 100%;
             background-color: #cecece;
             border-radius: 1rem;
-        }
+            z-index: 0;
+            // Overlap
+            display: grid;
+            justify-items: start;
+            align-items: start;
 
-        .progress-bar__inner {
-            height: 100%;
-            border-radius: 10rem;
+            &__inner {
+                height: 100%;
+                border-radius: 10rem;
+                z-index: 2;
+                grid-column-start: 1;
+                grid-row-start: 1;
+
+                &.diff {
+                    z-index: 1;
+                    filter: brightness(120%);
+                }
+            }
+        }
+    }
+
+    .tlc {
+        background-color: #348ccb;
+
+        // TODO maybe this can be done better
+        &__text {
+            background-color: transparent;
+            color: #348ccb;
+            filter: brightness(120%);
+        }
+    }
+
+    .final-edit {
+        background-color: #ffaa00;
+
+        &__text {
+            background-color: transparent;
+            color: #ffaa00;
+            filter: brightness(120%);
+        }
+    }
+
+    .proofread {
+        background-color: $highlight-secondary;
+
+        &__text {
+            background-color: transparent;
+            color: $highlight-secondary;
+            filter: brightness(120%);
         }
     }
 
@@ -190,6 +236,17 @@
             padding: 0.3rem 1rem;
             border-radius: 3rem;
             margin-right: 0.2rem;
+            transition: filter 0.3s ease-in-out;
+            cursor: pointer;
+
+            &:hover {
+                filter: brightness(120%);
+            }
+
+            &.muted {
+                background-color: transparent;
+                color: black;
+            }
         }
 
         span:last-child {
@@ -197,15 +254,18 @@
         }
     }
 
-    .tlc {
-        background-color: #348ccb;
+    #view-all-btn {
+        color: $highlight-secondary;
+        cursor: pointer;
+        transition: filter ease-in-out 0.2s;
+
+        &:hover {
+            filter: brightness(120%);
+        }
     }
 
-    .final-edit {
-        background-color: #ffaa00;
-    }
-
-    .proofread {
-        background-color: $highlight-secondary;
+    .no-progress {
+        opacity: 0;
+        transition: opacity ease-in-out 0.35s;
     }
 }

@@ -32,8 +32,8 @@ date: 2022-02-08 01:36:36 +0100
 
 <!-- This is rendered with JS -->
 
+<h3>Progress in the past 2 weeks</h3>
 <div id="project-progress">
-    <h3>Progress in the past 2 weeks</h3>
     <div id="legend">
         <span class="tlc">TL(C)</span>
         <span class="final-edit">Final Edit</span>
@@ -82,7 +82,7 @@ date: 2022-02-08 01:36:36 +0100
         "Chapter 7 Extra": {
             "totalPages": 128,
             "progress": { "TL(C)": 128, "Final Edit": 128, "Proofread": 0 },
-            "diff": { "Final Edit": 128 }
+            "diff": { "Final Edit": 30 }
         },
         "Chapter 8": {
             "totalPages": 287,

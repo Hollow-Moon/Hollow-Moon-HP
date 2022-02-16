@@ -6,51 +6,144 @@ if (projectProgress) {
         'No progress info defined in the "projectProgressStats" variable as expected.'
     );
 
-    const createProgressBar = (percent, extraClass = null) => {
-        const progressBar = document.createElement("DIV");
-        progressBar.classList.add("progress-bar");
-
+    const createProgressBar = (percent, extraClasses = null) => {
+        // Inner progress bar (actual %, coloured)
         const progressBarInner = document.createElement("DIV");
         progressBarInner.classList.add("progress-bar__inner");
-        if (extraClass) progressBarInner.classList.add(extraClass);
-        progressBar.appendChild(progressBarInner);
+        if (extraClasses) progressBarInner.classList.add(...extraClasses);
 
+        // Set percentage
         progressBarInner.style.width = `${percent}%`;
 
-        return progressBar;
+        return progressBarInner;
     };
 
     for (const chapter in projectProgressStats) {
+        // Extract info
         const totalChapterPages = projectProgressStats[chapter]["totalPages"];
         const chapterProgressStats = projectProgressStats[chapter]["progress"];
+        const progressDiff = projectProgressStats[chapter]["diff"];
 
+        // Overall chapter progress box
         const chapterProgress = document.createElement("DIV");
         chapterProgress.classList.add("chapter-progress");
 
+        // Rendering the title
         const chapterTitle = document.createElement("p");
         chapterTitle.appendChild(document.createTextNode(chapter));
         chapterProgress.appendChild(chapterTitle);
 
+        // Rendering the progress bars
         const chapterProgressBars = document.createElement("DIV");
         chapterProgressBars.classList.add("chapter-progress-bars");
 
         for (const stage in chapterProgressStats) {
+            // Process the stage name into a CSS class
+            const stageClass = stage.toLowerCase().replace("(", "").replace(")", "").replace(" ", "-");
+
+            // Wrapper for bar + % indicator
             const div = document.createElement("DIV");
-            div.classList.add("progress-bar-wrapper");
+            div.classList.add("progress-bar-wrapper", `progress-bar__${stageClass}`);
 
-            const extraClass = stage.toLowerCase().replace("(", "").replace(")", "").replace(" ", "-");
+            // Mine % & instantiate
+            // Progress bar wrapper (grey etc)
+            const progressBar = document.createElement("DIV");
+            progressBar.classList.add("progress-bar");
 
-            const percent = Math.round((chapterProgressStats[stage] / totalChapterPages) * 100);
-            div.appendChild(createProgressBar(percent, extraClass));
+            let percent = Math.round((chapterProgressStats[stage] / totalChapterPages) * 100);
+            let newPercent = null;
+            if (progressDiff && progressDiff[stage]) {
+                const newPageCount = chapterProgressStats[stage] - progressDiff[stage];
+                percent = Math.round((newPageCount / totalChapterPages) * 100);
 
+                newPercent = Math.round((chapterProgressStats[stage] / totalChapterPages) * 100);
+                progressBar.appendChild(createProgressBar(newPercent, [stageClass, "diff"]));
+            }
+            progressBar.appendChild(createProgressBar(percent, [stageClass]));
+
+            div.appendChild(progressBar);
+
+            // Instantiate progress % render
             const percentIndicator = document.createElement("span");
             percentIndicator.appendChild(document.createTextNode(`${percent}%`));
+            if (progressDiff && progressDiff[stage]) {
+                percentIndicator.innerHTML = `${percent}% (<span class="diff-text ${stageClass}__text">+${
+                    newPercent - percent
+                }%</span>)`;
+            }
+
             div.appendChild(percentIndicator);
 
             chapterProgressBars.appendChild(div);
         }
 
+        // Render it onto the page
         chapterProgress.appendChild(chapterProgressBars);
+
+        if (!progressDiff) {
+            chapterProgress.classList.add("no-progress");
+            chapterProgress.style.display = "none";
+        }
+
         projectProgress.appendChild(chapterProgress);
+    }
+
+    const viewAllButton = document.createElement("p");
+    viewAllButton.innerText = "View All Progress";
+    viewAllButton.id = "view-all-btn";
+
+    // Toggle view all progress
+    let allToggled = false;
+    const noProgressChapters = document.getElementsByClassName("no-progress");
+    for (let i = 0; i < noProgressChapters.length; ++i) {
+        noProgressChapters[i].addEventListener("transitionend", () => {
+            if (!allToggled) noProgressChapters[i].style.display = "none";
+        });
+    }
+
+    viewAllButton.addEventListener("click", (e) => {
+        allToggled = !allToggled;
+
+        for (let i = 0; i < noProgressChapters.length; ++i) {
+            if (allToggled) noProgressChapters[i].style.display = "flex";
+            setTimeout(() => (noProgressChapters[i].style.opacity = allToggled ? "1" : "0"), 100);
+        }
+
+        viewAllButton.innerText = `${allToggled ? "Hide" : "View"} All Progress`;
+    });
+
+    projectProgress.appendChild(viewAllButton);
+
+    // Legend interactivity
+    const legend = document.getElementById("legend");
+    const toggleStatus = {};
+    for (let i = 0; i < legend.children.length; ++i) {
+        const button = legend.children[i];
+        toggleStatus[button.classList[0]] = true;
+
+        const elements = document.getElementsByClassName(`progress-bar__${button.classList[0]}`);
+        for (let j = 0; j < elements.length; ++j) {
+            elements[j].addEventListener("transitionend", () => {
+                if (!toggleStatus[button.classList[0]]) {
+                    elements[j].style.display = "none";
+                }
+            });
+        }
+
+        button.addEventListener("click", () => {
+            const elements = document.getElementsByClassName(`progress-bar__${button.classList[0]}`);
+            toggleStatus[button.classList[0]] = !toggleStatus[button.classList];
+            for (let j = 0; j < elements.length; ++j) {
+                if (toggleStatus[button.classList[0]]) {
+                    elements[j].style.display = "flex";
+                    setTimeout(() => {
+                        elements[j].style.opacity = "1";
+                    }, 100);
+                } else {
+                    elements[j].style.opacity = "0";
+                }
+            }
+            button.classList.toggle("muted");
+        });
     }
 }
