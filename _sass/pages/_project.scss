@@ -157,7 +157,7 @@
         display: flex;
         flex-direction: column;
         flex: 1;
-        gap: 0.3rem;
+        gap: 0.15rem;
 
         .progress-bar-wrapper {
             display: flex;
@@ -168,11 +168,12 @@
             transition: opacity ease-in-out 0.25s;
 
             > span {
-                width: 12%;
+                width: 15%;
             }
         }
 
         .progress-bar {
+            position: relative; // For tooltip
             height: 0.5rem;
             width: 100%;
             background-color: #cecece;
@@ -194,6 +195,23 @@
                     z-index: 1;
                     filter: brightness(120%);
                 }
+            }
+
+            .tooltip {
+                visibility: hidden;
+                color: white;
+                position: absolute;
+                left: 50%;
+                top: -1rem;
+                transform: translate(-50%, -50%);
+                z-index: 3;
+
+                padding: 0.1rem 0.5rem;
+                border-radius: 3rem;
+            }
+
+            &:hover .tooltip {
+                visibility: visible;
             }
         }
     }
@@ -236,7 +254,7 @@
             padding: 0.3rem 1rem;
             border-radius: 3rem;
             margin-right: 0.2rem;
-            transition: filter 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
             cursor: pointer;
 
             &:hover {

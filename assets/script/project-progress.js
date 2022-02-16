@@ -61,13 +61,19 @@ if (projectProgress) {
             }
             progressBar.appendChild(createProgressBar(percent, [stageClass]));
 
+            // Tooltip
+            const tooltip = document.createElement("span");
+            tooltip.innerText = `${chapterProgressStats[stage]} / ${totalChapterPages}`;
+            tooltip.classList.add("tooltip", stageClass);
+            progressBar.appendChild(tooltip);
+
             div.appendChild(progressBar);
 
             // Instantiate progress % render
             const percentIndicator = document.createElement("span");
-            percentIndicator.appendChild(document.createTextNode(`${percent}%`));
+            percentIndicator.innerText = `${percent}%`;
             if (progressDiff && progressDiff[stage]) {
-                percentIndicator.innerHTML = `${percent}% (<span class="diff-text ${stageClass}__text">+${
+                percentIndicator.innerHTML = `${newPercent}% (<span class="diff-text ${stageClass}__text">+${
                     newPercent - percent
                 }%</span>)`;
             }
@@ -96,6 +102,7 @@ if (projectProgress) {
     let allToggled = false;
     const noProgressChapters = document.getElementsByClassName("no-progress");
     for (let i = 0; i < noProgressChapters.length; ++i) {
+        // When fade out ends, set display none
         noProgressChapters[i].addEventListener("transitionend", () => {
             if (!allToggled) noProgressChapters[i].style.display = "none";
         });
@@ -105,6 +112,7 @@ if (projectProgress) {
         allToggled = !allToggled;
 
         for (let i = 0; i < noProgressChapters.length; ++i) {
+            // Change opacity and maybe display on click
             if (allToggled) noProgressChapters[i].style.display = "flex";
             setTimeout(() => (noProgressChapters[i].style.opacity = allToggled ? "1" : "0"), 100);
         }
@@ -116,11 +124,12 @@ if (projectProgress) {
 
     // Legend interactivity
     const legend = document.getElementById("legend");
-    const toggleStatus = {};
+    const toggleStatus = {}; // Keep track of which categories are toggled
     for (let i = 0; i < legend.children.length; ++i) {
         const button = legend.children[i];
         toggleStatus[button.classList[0]] = true;
 
+        // When a bar fades out, set display none
         const elements = document.getElementsByClassName(`progress-bar__${button.classList[0]}`);
         for (let j = 0; j < elements.length; ++j) {
             elements[j].addEventListener("transitionend", () => {
@@ -134,15 +143,18 @@ if (projectProgress) {
             const elements = document.getElementsByClassName(`progress-bar__${button.classList[0]}`);
             toggleStatus[button.classList[0]] = !toggleStatus[button.classList];
             for (let j = 0; j < elements.length; ++j) {
+                // On click, if toggle on, set properties and fade in
                 if (toggleStatus[button.classList[0]]) {
                     elements[j].style.display = "flex";
                     setTimeout(() => {
                         elements[j].style.opacity = "1";
                     }, 100);
                 } else {
+                    // if toggle off, just set opacity and let the transitionend take care of it
                     elements[j].style.opacity = "0";
                 }
             }
+            // Change the button visibility
             button.classList.toggle("muted");
         });
     }
