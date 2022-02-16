@@ -32,9 +32,13 @@ date: 2022-02-08 01:36:36 +0100
 
 <!-- This is rendered with JS -->
 
-### Progress in the past 2 weeks
-
 <div id="project-progress">
+    <h3>Progress in the past 2 weeks</h3>
+    <div id="legend">
+        <span class="tlc">TL(C)</span>
+        <span class="final-edit">Final Edit</span>
+        <span class="proofread">Proofread</span>
+    </div>
 </div>
 <script type="text/javascript">
     const projectProgressStats = {

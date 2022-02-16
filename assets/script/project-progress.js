@@ -12,9 +12,8 @@ if (projectProgress) {
 
         const progressBarInner = document.createElement("DIV");
         progressBarInner.classList.add("progress-bar__inner");
+        if (extraClass) progressBarInner.classList.add(extraClass);
         progressBar.appendChild(progressBarInner);
-
-        if (extraClass) progressBar.classList.add(extraClass);
 
         progressBarInner.style.width = `${percent}%`;
 
@@ -39,8 +38,10 @@ if (projectProgress) {
             const div = document.createElement("DIV");
             div.classList.add("progress-bar-wrapper");
 
+            const extraClass = stage.toLowerCase().replace("(", "").replace(")", "").replace(" ", "-");
+
             const percent = Math.round((chapterProgressStats[stage] / totalChapterPages) * 100);
-            div.appendChild(createProgressBar(percent));
+            div.appendChild(createProgressBar(percent, extraClass));
 
             const percentIndicator = document.createElement("span");
             percentIndicator.appendChild(document.createTextNode(`${percent}%`));
