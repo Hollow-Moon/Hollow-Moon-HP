@@ -23,17 +23,19 @@ date: 2022-02-08 01:36:36 +0100
         <img id="project-logo" src="{{ "/assets/images/projects/mahoyo_logo.svg" | relative_url }}" alt="Witch on the Holy Night">
         <p>English Translation of Mahoutsukai no Yoru</p>
         <div id="project-download">
-            <a href="#" id="download-button">Download</a>
+            <a href="#" id="download-button">Download*</a>
             <a href="https://github.com/Hollow-Moon"><img src="{{ "assets/images/icons/soc-icon-gh.svg" | relative_url }}" alt="GitHub"></a>
         </div>
+        <p class="small">*This is still the old version α. It only contains a translation up to chapter 8.5 and chapters 1-7 are still Mcjon01's version. Not representative of the final release by any stretch.</p>
     </div>
 </div>
 <script type="text/javascript" src="{{ "/assets/script/project-showcase.js" | relative_url }}"></script>
 
-<!-- This is rendered with JS -->
+<div id="project-info">
 
-<h3>Progress in the past 2 weeks</h3>
+<!-- This is rendered with JS -->
 <div id="project-progress">
+<h1>Progress in the past 2 weeks</h1>
     <div id="legend">
         <span class="tlc">TL(C)</span>
         <span class="final-edit">Final Edit</span>
@@ -77,7 +79,7 @@ date: 2022-02-08 01:36:36 +0100
         "Chapter 7": {
             "totalPages": 438,
             "progress": { "TL(C)": 438, "Final Edit": 438, "Proofread": 0 },
-            "diff": { "Final Edit": 438 }
+            "diff": { "Final Edit": 38 }
         },
         "Chapter 7 Extra": {
             "totalPages": 128,
@@ -131,3 +133,37 @@ date: 2022-02-08 01:36:36 +0100
     }
 </script>
 <script type="text/javascript" src="{{ "/assets/script/project-progress.js" | relative_url }}"></script>
+<div id="project-credits">
+<h1>Credits</h1>
+<h2>Team</h2>
+<ul>
+    <li><b>Lead Translator</b>: Rain</li>
+    <li><b>Translators</b>: fumei, YusaoTeitoku, Roak, Catasplurge, Lon0z</li>
+    <li><b>Lead Editor & QC</b>: Expert Criminal</li>
+    <li><b>Assistant Editors</b>: 4digitmen, Alvy, hakase, vimiani</li>
+    <li><b>Programmers</b>: Alyinghood</li>
+    <li><b>Image Editors</b>: vimiani, Dobu</li>
+</ul>
+<h2>Special thanks</h2>
+<ul>
+    <li><b>Layemou</b>, <b>Nico-alter</b>, <b>Raymoo</b>, <b>Nicolate</b> for the translation from French the project was originally based on.</li>
+    <li><b>Moon-Trad</b> for the aforementioned French translation.</li>
+    <li><b>Quibi</b> for the Realta Nua project much of the tech work was based on.</li>
+    <li><b>Mcjon01</b> for any chapter 1-7 assets in our current download. They will not be included in our final release.</li>
+</ul>
+</div>
+</div>
+
+# Links
+
+-   [Beast's Lair Thread](https://forums.nrvnqsr.com/showthread.php/8586)
+-   [Tech Support]({{"/projects/mahoyo/support.html" | relative_url}})
+
+# Changelog
+
+## Version α
+
+A relic of the past. The final partial release.
+
+-   Translation up to Chapter 8.5 heavily based on the FR-EN translation.
+-   Not representative of current project quality targets.

@@ -66,6 +66,11 @@
             color: white;
             margin-bottom: 1vmin;
             font-size: min(4vmin, 1.5rem);
+
+            &.small {
+                font-size: 1rem;
+                margin: 0 4rem;
+            }
         }
 
         #project-download {
@@ -138,13 +143,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5vmin;
+    gap: 2.5vmin;
 
     .chapter-progress {
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 1vmin;
+        gap: 1.5vmin;
         width: 100%;
 
         > p {
@@ -168,7 +173,11 @@
             transition: opacity ease-in-out 0.25s;
 
             > span {
-                width: 15%;
+                width: max(20%, 8rem);
+
+                @media screen and (max-width: $breakpoint-tablet) {
+                    display: none;
+                }
             }
         }
 
@@ -285,5 +294,17 @@
     .no-progress {
         opacity: 0;
         transition: opacity ease-in-out 0.35s;
+    }
+}
+
+@media screen and (min-width: $breakpoint-desktop) {
+    #project-progress,
+    #project-credits {
+        width: 50%;
+    }
+
+    #project-info {
+        display: flex;
+        flex-direction: row;
     }
 }

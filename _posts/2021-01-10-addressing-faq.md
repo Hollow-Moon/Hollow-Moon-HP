@@ -8,13 +8,13 @@ date: 2021-01-10 12:00:00 +0000
 
 Hello *everyone*! We **hope** that you've all had a good new year so far. We're here to kick off the year with some updates, or clarifications rather, for all of you. None of the things in this post are really new, but they're things we feel haven't been made perfectly clear yet and so we've decided to collect them in this post to properly address them publically.
 
-### Regarding future partial releases (Ch. 9 + 10)
+# Regarding future partial releases (Ch. 9 + 10)
 
 As we approach the late stages of this project, some of you may be wondering whatever happened to us releasing Chapters 9 and 10 ahead of the full patch, once they finished. Unfortunately, this is our official explanation to you that this will not be happening. Said comment was hastily made during a time when we were still undergoing major changes in terms of workflow (more on this below), and we have since decided that, for the sake of quality and consistency, we will not be doing any additional partial releases. In other words, the next release from us will be the full patch for the entire game at once.
 
 We understand your disappointment and apologize for any confusion.
 
-### Regarding our workflow, or: why we don't consider this a double translation anymore
+# Regarding our workflow, or: why we don't consider this a double translation anymore
 
 As you may or may not know, this translation project originally started out as a French to English translation of the game, based on Moon-Trad's French script. At this point, Japanese translators who were able to cross-check the French translation with the original Japanese script were more of a scarcity, and as such the project fell into the category of your standard double translation. Eventually, however, applications by multiple Japanese translators/proofreaders came in, and as more of them joined the project, there was a big shift in how the translation was being approached and worked on. The basic workflow now instead consisted of a French to English translation, then proofreading the English script by comparing it to the Japanese directly, to finally be edited.
 

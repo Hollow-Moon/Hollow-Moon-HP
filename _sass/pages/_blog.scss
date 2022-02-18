@@ -35,7 +35,7 @@
     }
 
     .post-content {
-        --spacing: 1.5vh;
+        --spacing: 1.5vmin;
 
         img {
             max-width: 100%;
@@ -45,11 +45,17 @@
         h1,
         h2,
         h3 {
-            margin-top: 3vh;
+            color: $highlight-secondary;
         }
 
-        h3 {
-            font-size: clamp(1.2rem, 3.5vmin, 1.8rem);
+        h1 {
+            margin-top: 3vh;
+            font-size: clamp(1.5rem, 3.5vmin, 1.8rem);
+        }
+
+        h2 {
+            margin-top: 1.5vh;
+            font-size: clamp(1.3rem, 3vmin, 1.5rem);
         }
 
         p {
@@ -59,11 +65,26 @@
 
         ol {
             margin-top: var(--spacing);
-            padding-left: 4vh;
+            padding-left: 4vmin;
+        }
+
+        ul {
+            margin-top: var(--spacing);
+            padding-left: 4vmin;
         }
 
         li {
             font-size: var(--smallest-font-size);
+        }
+
+        a {
+            text-decoration: none;
+            color: $highlight-secondary;
+            transition: filter ease-in-out 0.2s;
+
+            &:hover {
+                filter: brightness(120%);
+            }
         }
     }
 }

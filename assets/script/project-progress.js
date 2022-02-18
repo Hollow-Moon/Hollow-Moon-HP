@@ -63,7 +63,7 @@ if (projectProgress) {
 
             // Tooltip
             const tooltip = document.createElement("span");
-            tooltip.innerText = `${chapterProgressStats[stage]} / ${totalChapterPages}`;
+            tooltip.innerText = `${chapterProgressStats[stage]} / ${totalChapterPages} pages`;
             tooltip.classList.add("tooltip", stageClass);
             progressBar.appendChild(tooltip);
 

@@ -48,7 +48,7 @@ function watch() {
         style
     );
     gulp.watch(
-        ["index.html", "_posts/*.md", "projects/*.md", "_includes/*.html", "_layouts/*.html", "assets/script/*.js"],
+        ["index.html", "_posts/*.md", "projects/**/*.md", "_includes/*.html", "_layouts/*.html", "assets/script/*.js"],
         { usePolling: usePolling, interval: pollingInterval },
         gulp.series(jekyll, browserSyncReload)
     );
