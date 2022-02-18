@@ -1,6 +1,6 @@
 ---
 title: "Mahoutsukai no Yoru English Translation"
-layout: post
+layout: page
 permalink: "/projects/mahoyo/"
 active_tab: projects
 ---
