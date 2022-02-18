@@ -31,7 +31,9 @@ layout: default
             </div>
         </div>
         <div id="blog-posts">
-            <h1 class="text-highlight">Latest Blog Posts</h1>
+            <div id="post-list-header">
+                <h1 class="text-highlight">Latest Blog Posts</h1> <a href="{{ "/posts" | relative_url }}">View All</a>
+            </div>
             <div class="latest-posts">
                 {% for post in paginator.posts %}
                 <a href="{{ post.url | relative_url }}"

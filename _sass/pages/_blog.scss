@@ -88,3 +88,37 @@
         }
     }
 }
+
+#blog-post-list {
+    width: 100%;
+    color: white;
+
+    .blog-post {
+        margin-top: 2vh;
+        background-color: $highlight-secondary;
+        padding: 30px;
+        color: white;
+
+        header {
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            > h1 {
+                color: white;
+                flex-grow: 1;
+                font-size: 1.5rem;
+                margin-top: 0;
+            }
+
+            .post-meta {
+                font-size: 1rem;
+            }
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+}

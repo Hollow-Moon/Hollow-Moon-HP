@@ -56,10 +56,11 @@
     overflow: auto;
 
     // Hide potential second scrollbar
-    -webkit-scrollbar { // Chrome
+    -webkit-scrollbar {
+        // Chrome
         display: none;
     }
-    -ms-overflow-style: none;  // IE and Edge
+    -ms-overflow-style: none; // IE and Edge
     scrollbar-width: none; // Firefox
 
     // Desktop
@@ -94,7 +95,7 @@
         .project {
             img {
                 filter: drop-shadow($project-shadow);
-                transition: filter ease-in-out .25s;
+                transition: filter ease-in-out 0.25s;
 
                 &:hover {
                     filter: drop-shadow($project-shadow-highlight);
@@ -111,15 +112,31 @@
         margin-top: 35px;
         width: 100%;
 
+        #post-list-header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1vw;
+            margin-bottom: 30px;
+
+            > a {
+                font-size: 2rem;
+                text-decoration: none;
+                color: rgba($highlight-secondary, 0.6);
+                transition: color ease-in-out 0.2s;
+                margin-top: 0.3rem;
+
+                &:hover {
+                    color: rgba($highlight-secondary, 1);
+                }
+            }
+        }
+
         // Desktop
         @media screen and (min-width: $breakpoint-tablet) {
             margin-top: 0;
             width: 50%;
             margin-right: auto;
-        }
-        
-        > h1 {
-            margin-bottom: 30px;
         }
 
         .latest-posts {
@@ -139,7 +156,7 @@
 
         .blog-post {
             background-color: rgba($highlight-secondary, 0.28);
-            transition: background-color ease-in-out .25s;
+            transition: background-color ease-in-out 0.25s;
             padding: 30px;
 
             header {

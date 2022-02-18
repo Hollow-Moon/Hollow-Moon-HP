@@ -4,8 +4,8 @@
         <img src="{{ "/assets/images/logo_text.svg" | relative_url }}" alt="Hollow Moon" id="logo-text" class="img-highlight-hover">
     </a>
     <div id="site-links">
-        <a {% if page.active_tab == 'projects' %} class="active"{% endif %} href="#TODO"><div class="link-inner">Projects</div></a>
-        <a {% if page.active_tab == 'blog' %} class="active"{% endif %} href="#TODO"><div class="link-inner">Blog</div></a>
+        <a {% if page.active_tab == 'projects' %} class="active"{% endif %} href="{{ "/projects" | relative_url }}"><div class="link-inner">Projects</div></a>
+        <a {% if page.active_tab == 'blog' %} class="active"{% endif %} href="{{ "/posts/" | relative_url }}"><div class="link-inner">Blog</div></a>
         <a {% if page.active_tab == 'about' %} class="active"{% endif %} href="#TODO"><div class="link-inner">About</div></a>
     </div>
     <div id="socials">
