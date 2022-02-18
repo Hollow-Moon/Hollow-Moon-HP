@@ -50,6 +50,7 @@ function watch() {
     gulp.watch(
         [
             "index.html",
+            "about.md",
             "_posts/*.md",
             "posts/*.html",
             "projects/**/*.md",

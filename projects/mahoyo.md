@@ -1,7 +1,7 @@
 ---
 title: "Mahoutsukai no Yoru English Translation"
 layout: post
-permalink: "/projects/mahoyo.html"
+permalink: "/projects/mahoyo/"
 active_tab: projects
 ---
 

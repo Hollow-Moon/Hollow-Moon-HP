@@ -6,7 +6,7 @@ permalink: "/projects/mahoyo/support.html"
 date: 2020-09-22 12:00:00 +0000
 ---
 
-[← Back to project page]({{ "/projects/mahoyo.html" | relative_url }})
+[← Back to project page]({{ "/projects/mahoyo/" | relative_url }})
 
 # The game freezes with looping sound effects
 
@@ -110,4 +110,4 @@ This is an intended part of the game.
 
 If the above does not help with your issue, you can ask in the [Beast's Lair forum thread](https://forums.nrvnqsr.com/showthread.php/8586) or the [Discord server](https://discord.gg/2ngdyQd).
 
-[← Back to project page]({{ "/projects/mahoyo.html" | relative_url }})
+[← Back to project page]({{ "/projects/mahoyo/" | relative_url }})

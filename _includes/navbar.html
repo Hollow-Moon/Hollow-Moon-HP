@@ -6,7 +6,7 @@
     <div id="site-links">
         <a {% if page.active_tab == 'projects' %} class="active"{% endif %} href="{{ "/projects" | relative_url }}"><div class="link-inner">Projects</div></a>
         <a {% if page.active_tab == 'blog' %} class="active"{% endif %} href="{{ "/posts/" | relative_url }}"><div class="link-inner">Blog</div></a>
-        <a {% if page.active_tab == 'about' %} class="active"{% endif %} href="#TODO"><div class="link-inner">About</div></a>
+        <a {% if page.active_tab == 'about' %} class="active"{% endif %} href="{{ "/about/" | relative_url }}"><div class="link-inner">About</div></a>
     </div>
     <div id="socials">
         <a href="https://twitter.com/HollowMoonTL"><img src="{{ "assets/images/icons/soc-icon-twt.svg" | relative_url }}" alt="Twitter" class="social-icon"></a>
