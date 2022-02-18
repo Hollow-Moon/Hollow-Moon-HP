@@ -1,31 +1,31 @@
 @font-face {
     font-family: "XCharter";
-    src: url("/assets/fonts/XCharter-Roman.woff2") format("woff2");
+    src: url($baseurl + "/assets/fonts/XCharter-Roman.woff2") format("woff2");
 }
 @font-face {
     font-family: "XCharter";
-    src: url("/assets/fonts/XCharter-Bold.woff2") format("woff2");
+    src: url($baseurl + "/assets/fonts/XCharter-Bold.woff2") format("woff2");
     font-weight: bold;
 }
 @font-face {
     font-family: "XCharter";
-    src: url("/assets/fonts/XCharter-Italic.woff2") format("woff2");
+    src: url($baseurl + "/assets/fonts/XCharter-Italic.woff2") format("woff2");
     font-style: italic;
 }
 @font-face {
     font-family: "XCharter";
-    src: url("/assets/fonts/XCharter-Slanted.woff2") format("woff2");
+    src: url($baseurl + "/assets/fonts/XCharter-Slanted.woff2") format("woff2");
     font-style: oblique;
 }
 @font-face {
     font-family: "XCharter";
-    src: url("/assets/fonts/XCharter-BoldItalic.woff2") format("woff2");
+    src: url($baseurl + "/assets/fonts/XCharter-BoldItalic.woff2") format("woff2");
     font-weight: bold;
     font-style: italic;
 }
 @font-face {
     font-family: "XCharter";
-    src: url("/assets/fonts/XCharter-BoldSlanted.woff2") format("woff2");
+    src: url($baseurl + "/assets/fonts/XCharter-BoldSlanted.woff2") format("woff2");
     font-weight: bold;
     font-style: oblique;
 }

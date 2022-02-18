@@ -2,6 +2,8 @@
 # Needs front matter to be compiled
 ---
 
+$baseurl: "{{ site.baseurl }}";
+
 @import "themes/primary";
 @import "general";
 @import "components/navbar";
