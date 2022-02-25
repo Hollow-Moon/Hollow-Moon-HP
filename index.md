@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Redirect to Hollow Moon HP
-permalink: /
 redirect_to: https://ghpages.hollow-moon.org/
 ---
 
