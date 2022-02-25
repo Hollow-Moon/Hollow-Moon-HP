@@ -1,7 +1,7 @@
 <nav id="navbar">
     <a href="{{ "/" | relative_url }}" id="logo-link">
-        <img src="{{ "/assets/images/logo_notext.svg" | relative_url }}" alt="🌙" id="logo" class="img-highlight-hover">
-        <img src="{{ "/assets/images/logo_text.svg" | relative_url }}" alt="Hollow Moon" id="logo-text" class="img-highlight-hover">
+        <img src="{{ "/assets/images/logo.svg" | relative_url }}" alt="🌙" id="logo" class="img-highlight-hover">
+        <img src="{{ "/assets/images/logo_text.svg" | relative_url }}" alt="Hollow Moon" id="logo-text" class="logo-text-hover">
     </a>
     <div id="site-links">
         <a {% if page.active_tab == 'projects' %} class="active"{% endif %} href="{{ "/projects" | relative_url }}"><div class="link-inner">Projects</div></a>

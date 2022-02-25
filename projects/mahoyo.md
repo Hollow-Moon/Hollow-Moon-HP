@@ -19,7 +19,7 @@ active_tab: projects
         </div>
     </div>
     <div id="project-overview">
-        <img id="project-logo" src="{{ "/assets/images/projects/mahoyo_logo.svg" | relative_url }}" alt="Witch on the Holy Night">
+        <img id="project-logo" class="mahoyo-logo" src="{{ "/assets/images/projects/mahoyo_logo.svg" | relative_url }}" alt="Witch on the Holy Night">
         <p>English Translation of Mahoutsukai no Yoru</p>
         <div id="project-download">
             <a href="#" id="download-button">Download*</a>

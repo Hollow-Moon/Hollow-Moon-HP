@@ -23,8 +23,14 @@
 
     > a {
         display: flex;
+        gap: 30px;
         height: max(30rem, 65%);
         margin-bottom: -10px;
+        flex-direction: column;
+
+        > #logo-text {
+            height: 15%;
+        }
     }
 
     #logo {
