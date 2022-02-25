@@ -12,10 +12,10 @@ active_tab: projects
             <div>
                 <iframe src="https://www.youtube.com/embed/cvXA6mh9Y5I" frameborder="0"></iframe>
             </div>
-            <img src="{{ "/assets/images/projects/mahoyo_logo.svg" | relative_url }}">
-            <img>
-            <img>
-            <img>
+            <img src="{{ "/assets/images/projects/mahoyo_screenshots_1.jpg" | relative_url }}">
+            <img src="{{ "/assets/images/projects/mahoyo_screenshots_2.jpg" | relative_url }}">
+            <img src="{{ "/assets/images/projects/mahoyo_screenshots_3.jpg" | relative_url }}">
+            <img src="{{ "/assets/images/projects/mahoyo_screenshots_4.jpg" | relative_url }}">
         </div>
     </div>
     <div id="project-overview">
