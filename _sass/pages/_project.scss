@@ -184,7 +184,7 @@
 
         > p {
             margin: 0;
-            width: 15%;
+            width: 20%;
         }
     }
 
@@ -203,7 +203,7 @@
             transition: opacity ease-in-out 0.25s;
 
             > span {
-                width: max(20%, 8rem);
+                width: max(30%, 8rem);
 
                 @media screen and (max-width: $breakpoint-tablet) {
                     display: none;
