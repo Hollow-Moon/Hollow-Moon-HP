@@ -73,49 +73,49 @@ active_tab: projects
         },
         "Chapter 6": {
             "totalPages": 374,
-            "progress": { "TL(C)": 374, "Final Edit": 374, "QC": 57 }
+            "progress": { "TL(C)": 374, "Final Edit": 374, "QC": 75 },
+            "diff": { "QC": 18 }
         },
         "Chapter 7": {
             "totalPages": 438,
-            "progress": { "TL(C)": 438, "Final Edit": 438, "QC": 0 },
-            "diff": { "Final Edit": 38 }
+            "progress": { "TL(C)": 438, "Final Edit": 438, "QC": 0 }
         },
         "Chapter 7 Extra": {
             "totalPages": 128,
-            "progress": { "TL(C)": 128, "Final Edit": 128, "QC": 0 },
-            "diff": { "Final Edit": 30 }
+            "progress": { "TL(C)": 128, "Final Edit": 128, "QC": 0 }
         },
         "Chapter 8": {
             "totalPages": 287,
-            "progress": { "TL(C)": 287, "Final Edit": 0, "QC": 287 }
+            "progress": { "TL(C)": 287, "Final Edit": 0, "QC": 0 },
+            "diff": {"Final Edit": 116}
         },
         "Chapter 8 Extra": {
             "totalPages": 151,
-            "progress": { "TL(C)": 151, "Final Edit": 0, "QC": 151 }
+            "progress": { "TL(C)": 151, "Final Edit": 0, "QC": 0 }
         },
         "Chapter 8.5": {
             "totalPages": 383,
-            "progress": { "TL(C)": 383, "Final Edit": 0, "QC": 383 }
+            "progress": { "TL(C)": 383, "Final Edit": 0, "QC": 0 }
         },
         "Chapter 9": {
             "totalPages": 432,
-            "progress": { "TL(C)": 432, "Final Edit": 0, "QC": 432 }
+            "progress": { "TL(C)": 432, "Final Edit": 0, "QC": 0 }
         },
         "Chapter 10": {
             "totalPages": 302,
-            "progress": { "TL(C)": 302, "Final Edit": 0, "QC": 302 }
+            "progress": { "TL(C)": 302, "Final Edit": 0, "QC": 0 }
         },
         "Chapter 11": {
             "totalPages": 342,
-            "progress": { "TL(C)": 342, "Final Edit": 0, "QC": 342 }
+            "progress": { "TL(C)": 342, "Final Edit": 0, "QC": 0 }
         },
         "Chapter 12": {
             "totalPages": 580,
-            "progress": { "TL(C)": 580, "Final Edit": 0, "QC": 580 }
+            "progress": { "TL(C)": 580, "Final Edit": 0, "QC": 0 }
         },
         "Chapter 13": {
             "totalPages": 246,
-            "progress": { "TL(C)": 246, "Final Edit": 0, "QC": 246 }
+            "progress": { "TL(C)": 246, "Final Edit": 0, "QC": 0 }
         },
         "All About Ploy": {
             "totalPages": 361,
