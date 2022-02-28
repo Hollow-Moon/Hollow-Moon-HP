@@ -17,7 +17,7 @@ The group's objective for the time being is to translate Mahoutsukai no Yoru int
 -   [Alvy](https://twitter.com/Aluhvee): Editor
 -   [Alyinghood](https://twitter.com/alyinghood): Programmer
 -   [Catasplurge](): TLC
--   [Comun](): Translator
+-   [Comun](https://twitter.com/ComunCoutinho): Translator
 -   [Dobu](https://twitter.com/Dobu_Dobu): Image Editor
 -   [Expert Criminal](https://twitter.com/ExpertCriminal_): Editor, QC
 -   [FBates](): Translator

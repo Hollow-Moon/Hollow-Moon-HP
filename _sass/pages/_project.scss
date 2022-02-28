@@ -47,6 +47,10 @@
                 width: 100%;
                 height: 100%;
             }
+
+            > img {
+                object-fit: cover;
+            }
         }
 
         #all-items {
@@ -56,7 +60,11 @@
 
             > * {
                 width: 25%;
-                height: 5vh;
+                height: 7vh;
+            }
+
+            > img {
+                object-fit: cover;
             }
 
             > .all-items__active {
@@ -118,6 +126,11 @@
                 &:hover {
                     filter: brightness(120%);
                 }
+
+                &.disabled {
+                    cursor: not-allowed;
+                    background-color: grey;
+                }
             }
 
             img {
@@ -142,10 +155,6 @@
             #active-item {
                 height: 100%;
                 width: 85%;
-
-                > img {
-                    object-fit: cover;
-                }
             }
 
             #all-items {
@@ -270,7 +279,7 @@
         }
     }
 
-    .final-edit {
+    .final-pass {
         background-color: #ffaa00;
 
         &__text {

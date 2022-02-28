@@ -58,6 +58,11 @@
             font-size: clamp(1.3rem, 3vmin, 1.8rem);
         }
 
+        h3 {
+            margin-top: 1vh;
+            font-size: clamp(1rem, 2.5vmin, 1.6rem);
+        }
+
         p {
             font-size: var(--smallest-font-size);
             margin-top: var(--spacing);
