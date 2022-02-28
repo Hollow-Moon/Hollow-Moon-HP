@@ -147,7 +147,6 @@ active_tab: projects
     <li><b>Layemou</b>, <b>Nico-alter</b>, <b>Raymoo</b>, <b>Nicolate</b> for the translation from French the project was originally based on.</li>
     <li><b>Moon-Trad</b> for the aforementioned French translation.</li>
     <li><b>Quibi</b> for the Realta Nua project much of the tech work was based on.</li>
-    <li><b>Mcjon01</b> for any chapter 1-7 assets in our current download. They will not be included in our final release.</li>
 </ul>
 </div>
 </div>
