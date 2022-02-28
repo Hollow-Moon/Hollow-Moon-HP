@@ -3,7 +3,7 @@ layout: post
 title: "Finalization and the New Progress Table"
 excerpt: <p>Today we have a couple of major things we'd like to discuss with you regarding the Mahoyo patch progress table, as well as the previously released partial patch.</p>
 active_tab: blog
-date: 2021-01-10 12:00:00 +0000
+date: 2022-02-28 12:00:00 +0000
 ---
 
 Welcome to the new website design! Today we have a couple of major things we'd like to discuss with you regarding the Mahoyo patch progress table, as well as the previously released partial patch. This is so we can clarify things about decisions made in recent months, or that should have been dealt with sooner.
