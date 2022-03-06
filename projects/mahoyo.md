@@ -85,8 +85,8 @@ active_tab: projects
         },
         "Chapter 8": {
             "totalPages": 287,
-            "progress": { "TL(C)": 287, "Final Pass": 116, "QC": 0 },
-            "diff": {"Final Pass": 116}
+            "progress": { "TL(C)": 287, "Final Pass": 136, "QC": 0 },
+            "diff": {"Final Pass": 136}
         },
         "Chapter 8 Extra": {
             "totalPages": 151,
