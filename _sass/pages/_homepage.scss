@@ -54,6 +54,11 @@
         height: auto;
         filter: drop-shadow($shadow);
     }
+
+    #logo {
+        @extend .img-highlight-hover;
+        filter: drop-shadow($shadow);
+    }
 }
 
 #overview {
