@@ -33,7 +33,7 @@ active_tab: projects
 
 <!-- This is rendered with JS -->
 <div id="project-progress">
-<h1>Progress in the past 2 weeks</h1>
+<h1>Progress in the past month</h1>
     <div id="legend">
         <span class="tlc">TL(C)</span>
         <span class="final-pass">Final Pass</span>
