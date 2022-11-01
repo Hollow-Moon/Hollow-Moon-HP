@@ -72,8 +72,8 @@ active_tab: projects
         },
         "Chapter 6": {
             "totalPages": 374,
-            "progress": { "TL(C)": 374, "Final Pass": 374, "QC": 343 },
-            "diff": { "QC": 60 }
+            "progress": { "TL(C)": 374, "Final Pass": 374, "QC": 355 },
+            "diff": { "QC": 12 }
         },
         "Chapter 7": {
             "totalPages": 438,
@@ -97,7 +97,8 @@ active_tab: projects
         },
         "Chapter 9": {
             "totalPages": 432,
-            "progress": { "TL(C)": 432, "Final Pass": 169, "QC": 0 }
+            "progress": { "TL(C)": 432, "Final Pass": 352, "QC": 0 }
+            "diff": { "Final Pass": 183 }
         },
         "Chapter 10": {
             "totalPages": 302,
