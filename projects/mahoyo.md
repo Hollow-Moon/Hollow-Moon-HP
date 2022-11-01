@@ -136,15 +136,15 @@ active_tab: projects
 <h2>Team</h2>
 <ul>
     <li><b>Lead Translator</b>: Rain</li>
-    <li><b>Translators</b>: fumei, YusaoTeitoku, Roak, Catasplurge, Lon0z</li>
+    <li><b>Translators</b>: Catasplurge, fumei, Lon0z, Roak, YusaoTeitoku</li>
     <li><b>Lead Editor & QC</b>: Expert Criminal</li>
-    <li><b>Assistant Editors</b>: 4digitmen, Alvy, hakase, vimiani</li>
+    <li><b>Assistant Editors</b>: 4digitmen, Alvy, Fasty, hakase, vimiani</li>
     <li><b>Programmers</b>: Alyinghood</li>
-    <li><b>Image Editors</b>: vimiani, Dobu</li>
+    <li><b>Image Editors</b>: Dobu, vimiani</li>
 </ul>
 <h2>Special thanks</h2>
 <ul>
-    <li><b>Layemou</b>, <b>Nico-alter</b>, <b>Raymoo</b>, <b>Nicolate</b> for the translation from French the project was originally based on.</li>
+    <li><b>Layemou</b>, <b>Nico-alter</b>, <b>Nicolate</b>, and <b>Raymoo</b> for the French translation the project was originally based on.</li>
     <li><b>Moon-Trad</b> for the aforementioned French translation.</li>
     <li><b>Quibi</b> for the Realta Nua project much of the tech work was based on.</li>
 </ul>
