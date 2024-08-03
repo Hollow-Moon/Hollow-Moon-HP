@@ -33,5 +33,5 @@ The group's objective for the time being is to translate Mahoutsukai no Yoru int
 -   [Rain](https://twitter.com/RainAnnen): Translator, TLC
 -   [Raymoo](): FR Translator
 -   [Roak](https://twitter.com/sukerokushin): Translator, TLC
--   [vimiani](https://twitter.com/vimiani): Image Editor, QC, Group Founder
+-   [vimiani](https://twitter.com/vimiani): Image Editor, QC
 -   [YusaoTeitoku](https://twitter.com/YusaoTeitoku): Translator, TLC
